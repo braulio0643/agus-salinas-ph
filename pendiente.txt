@@ -1,0 +1,4 @@
+falta:
+-hacer que que los breakpoints de las media query sean los mismos para el inicio y para las fotos
+-hacer que la imagen del index sea un fondo en vez de una img insertada
+-cambiar la tipografia de bootstrap
