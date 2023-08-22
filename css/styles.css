@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 
@@ -23,6 +24,28 @@ main div p{
     justify-content: center;
 }
 
+.stencils{
+    margin: 0px 200px;
+}
+
+.stencils div h1{
+    font-size: 2rem;
+}
+
+.menesunda{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 0px 90px;
+}
+
+.menesunda img{
+    width: 500px;
+    height:300px;
+}
+
 
 
 footer{
@@ -32,88 +55,6 @@ footer{
     height:88px;
     border-radius: 100px;
     
-}
-
-@media screen and (min-width:450px){
-    .navBarLogo{
-        display: none;
-    }
-    footer{
-        width:500px;
-        height:88px;
-    }
-
-    main{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 20px 60px;
-        
-    }
-
-    main div img{
-        display: flex;
-        justify-content: center;
-        width: 500px;
-        height: 400px;
-    }
-
-}
-
-@media screen and (min-width:576px){
-    footer{
-        width:576px;
-        height:88px;
-    }
-}
-
-@media screen and (min-width:768px){
-    footer{
-        width:768px;
-        height:88px;
-    }
-
-    main{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin: 20px 120px;
-    }
-
-    main div img{
-        width: 768px;
-        height: 600px;
-    }
-
-    
-
-}
-
-
-@media screen and (min-width:1000px){
-    .navBarLogo{
-        display: block;
-    }
-
-    footer{
-        width:768px;
-        height:88px;
-    }
-
-    main{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin: 20px 120px;
-    }
-
-    main div img{
-        width: 1000px;
-        height: 700px;
-    }
-
-    
-
 }
 
 footer ul li{
@@ -166,9 +107,6 @@ footer ul li{
     
 }
 
-.contacto{
-    margin: 1rem 40rem;
-}
 
 .contacto section form div label{
     color:#6e4dd1;
@@ -228,19 +166,97 @@ footer ul li{
     height: 100%;
 }
 
+@media screen and (min-width:450px){
+    .navBarLogo{
+        display: none;
+    }
+    footer{
+        width:500px;
+        height:88px;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px 60px;
+        
+    }
+
+    main div img{
+        display: flex;
+        justify-content: center;
+        width: 500px;
+        height: 400px;
+    }
+
+}
+
+@media screen and (min-width:576px){
+    footer{
+        width:576px;
+        height:88px;
+    }
+}
+
+@media screen and (min-width:768px){
+    footer{
+        width:768px;
+        height:88px;
+    }
+
+    main{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 20px 120px;
+    }
+
+    main div img{
+        width: 768px;
+        height: 600px;
+    }
+
+    
+
+}
+
+
 @media screen and (min-width:600px) {
     .galeriaMarquee, .galeriaEquinox, .galeriaEquinox2{
         margin: 3rem 11rem;
     }
 }
 
+@media screen and (min-width:1000px){
+    .navBarLogo{
+        display: block;
+    }
 
-@media screen and (min-width:1000px) {
+    footer{
+        width:768px;
+        height:88px;
+    }
+
+    main{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 20px 120px;
+    }
+
+    main div img{
+        width: 1000px;
+        height: 700px;
+    }
+
     .galeriaMarquee{
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: repeat(3, 1fr);
         margin: 3rem 18rem;
     }
+
+
     .galeriaMarquee .img4{
         grid-column: span 2;
     }
@@ -287,5 +303,20 @@ footer ul li{
         grid-template-rows: repeat(3,1fr);
         margin:0rem 18rem 3rem 18rem;
     }
+
+    .menesunda .img1{
+        width: 1000px;
+        height: 600px;
+    }
+
+    .contacto{
+        margin: 1rem 10rem;
+    }
     
-}
+} 
+
+@media screen and (min-width:1200px) {
+    .contacto{
+        margin: 1rem 30rem;
+    } 
+}   
