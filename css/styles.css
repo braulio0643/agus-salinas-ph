@@ -25,7 +25,7 @@ main div p{
 }
 
 .stencils{
-    margin: 0px 200px;
+    margin: 0px 180px;
 }
 
 .stencils div h1{
@@ -38,7 +38,7 @@ main div p{
     justify-content:center;
     flex-wrap: wrap;
     gap: 25px;
-    margin: 0px 90px;
+    margin: 0px 80px;
 }
 
 .menesunda img{
