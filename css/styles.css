@@ -60,15 +60,9 @@ footer{
 }
 
 .socials{
-    display: flex;
-    flex-direction: row;
     padding: 25px 25px;
     background-color: #6e4dd1;
     border-radius: 100px;
-    width: 350px;
-    height:100px;
-    justify-content: space-evenly;
-   
 }
 
 
@@ -209,14 +203,6 @@ footer img{
 
 @media screen and (min-width:600px) {
     
-    .socials{
-       
-        width: 600px;
-        height:100px;
-        
-       
-    }
-
     .galeriaMarquee, .galeriaEquinox, .galeriaEquinox2{
         margin: 3rem 11rem;
     }
@@ -224,6 +210,9 @@ footer img{
 
 @media screen and (min-width:1000px){
 
+    .socials{
+        width:900px;
+    }
     .img-inicio-1{
         display:none;
     }
@@ -232,12 +221,8 @@ footer img{
         width: 1000px;
         height: 600px;
     }
-    .socials{
-       
-        width: 800px;
-        height:100px;
-        
-       
+    .container{
+        width:800px;
     }
 
     .img-inicio-2{
