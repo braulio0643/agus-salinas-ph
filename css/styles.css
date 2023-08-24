@@ -24,10 +24,6 @@ main div p{
     color: #6e4dd1;
 }
 
-.texto-inicio{
-    
-}
-
 .stencils{
     display: flex;
     flex-direction: column;
@@ -84,6 +80,13 @@ footer img{
     
 }
 
+  
+.bordeRosa{
+    border-color: #6e4dd1;
+    background-color:  #6e4dd1;
+    border-radius: 5px;
+} 
+
 
 .bodyColor {
     background-color: #010102;
@@ -94,7 +97,12 @@ footer img{
 .navBarCustom{
     background-color: #6e4dd1;
    border-radius: 25px;
+   
   
+}
+
+.navBarCustom li a{
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .navBarCustom li a:hover{
