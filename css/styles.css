@@ -34,6 +34,12 @@ main div p{
     justify-content: center;
 }
 
+.stencilsCorto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .stencils div h1{
     font-size: 2rem;
 }
@@ -314,6 +320,14 @@ footer img{
 
     .contacto{
         margin: 1rem 10rem;
+    }
+
+
+    .stencils{
+        margin: 2rem 8rem;
+    }
+    .stencilsCorto{
+        margin: 2rem 6rem;
     }
     
 } 
