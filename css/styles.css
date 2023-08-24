@@ -7,6 +7,12 @@
 
 
 
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 60px;
+}
 
 
 main div h1{
@@ -19,13 +25,13 @@ main div p{
 }
 
 .texto-inicio{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    
 }
 
 .stencils{
-    margin: 0px 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .stencils div h1{
@@ -42,37 +48,36 @@ main div p{
 }
 
 .menesunda img{
-    width: 500px;
-    height:300px;
+    width: 350px;
+    height:170px;
 }
-
-
 
 footer{
-    
-    background-color: #6e4dd1;
-    width:788px;
-    height:88px;
-    border-radius: 100px;
-    
-}
-
-footer ul li{
-    list-style: none;
-    
+    display: flex;
+    justify-content: center;
 }
 
 .socials{
     display: flex;
+    flex-direction: row;
+    padding: 25px 25px;
+    background-color: #6e4dd1;
+    border-radius: 100px;
+    width: 350px;
+    height:100px;
     justify-content: space-evenly;
+   
 }
 
-.socials img{
-    padding:10px;
+
+
+footer img{
+    
     width: 50px;
     height: 50px;
     
 }
+
 
 .bodyColor {
     background-color: #010102;
@@ -166,51 +171,17 @@ footer ul li{
     height: 100%;
 }
 
-@media screen and (min-width:450px){
-    .navBarLogo{
-        display: none;
-    }
-    footer{
-        width:500px;
-        height:88px;
-    }
-
-    main{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 20px 60px;
-        
-    }
-
-    main div img{
-        display: flex;
-        justify-content: center;
-        width: 500px;
-        height: 400px;
-    }
-
+.navBarLogo{
+    display: none;
 }
 
-@media screen and (min-width:576px){
-    footer{
-        width:576px;
-        height:88px;
-    }
+.img-inicio-2{
+    display:none;
 }
+
+
 
 @media screen and (min-width:768px){
-    footer{
-        width:768px;
-        height:88px;
-    }
-
-    main{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin: 20px 120px;
-    }
 
     main div img{
         width: 768px;
@@ -223,20 +194,47 @@ footer ul li{
 
 
 @media screen and (min-width:600px) {
+    
+    .socials{
+       
+        width: 600px;
+        height:100px;
+        
+       
+    }
+
     .galeriaMarquee, .galeriaEquinox, .galeriaEquinox2{
         margin: 3rem 11rem;
     }
 }
 
 @media screen and (min-width:1000px){
+
+    .img-inicio-1{
+        display:none;
+    }
+    .img-inicio-2{
+        display:block;
+        width: 1000px;
+        height: 600px;
+    }
+    .socials{
+       
+        width: 800px;
+        height:100px;
+        
+       
+    }
+
+    .img-inicio-2{
+        display: block;
+    }
+
     .navBarLogo{
         display: block;
     }
 
-    footer{
-        width:768px;
-        height:88px;
-    }
+    
 
     main{
         display: flex;
@@ -305,8 +303,13 @@ footer ul li{
     }
 
     .menesunda .img1{
-        width: 1000px;
-        height: 600px;
+        width: 1100px;
+        height: 650px;
+    }
+
+    .menesunda img{
+        width: 535px;
+        height: 330px;
     }
 
     .contacto{
@@ -314,6 +317,7 @@ footer ul li{
     }
     
 } 
+
 
 @media screen and (min-width:1200px) {
     .contacto{
