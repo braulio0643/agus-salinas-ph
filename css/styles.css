@@ -239,7 +239,12 @@ footer img{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        align-items: center;
         margin: 20px 120px;
+    }
+
+    .texto-inicio{
+
     }
 
     main div img{
@@ -321,8 +326,3 @@ footer img{
     }
     
 } 
-
-
-@media screen and (min-width:1200px) {
-
-}   
