@@ -1,0 +1,55 @@
+.navBarCustom{
+    background-color: #6e4dd1;
+    border-radius: 25px;
+    li{
+        a{
+          font-weight: bold;     
+        }
+        a:hover{
+            background-color: nth($colores,2);
+            border-radius: 5px;
+        }
+    }
+    ul{
+        background-color: nth($colores,1);
+        li{
+            a:active{
+                background-color: nth($colores,1);
+            }
+        }
+    }
+}
+
+
+/* .navBarCustom{
+    background-color: #6e4dd1;
+    border-radius: 25px;
+    li{
+        a{
+          font-weight: bold;     
+        }
+        a:hover{
+            background-color: nth($colores,2);
+            border-radius: 5px;
+        }
+    }
+    ul{
+        background-color: nth($colores,1);
+        li{
+            a:active{
+                background-color: nth($colores,1);
+            }
+        }
+    }
+} porlas */
+
+.bordeRosa{
+    border-color: #6e4dd1;
+    background-color:  #6e4dd1;
+    border-radius: 5px;
+} 
+
+.navBarLogo{
+    width: 100px;
+    height: 80px;
+}

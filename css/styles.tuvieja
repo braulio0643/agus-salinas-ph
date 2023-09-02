@@ -5,8 +5,6 @@
 }
 
 
-
-
 main{
     display: flex;
     flex-direction: column;
@@ -15,7 +13,7 @@ main{
 }
 
 
-main div h1{
+.rosa{
     color: #6e4dd1;
 }
 
@@ -91,8 +89,6 @@ footer img{
 .navBarCustom{
     background-color: #6e4dd1;
    border-radius: 25px;
-   
-  
 }
 
 .navBarCustom li a{
@@ -243,10 +239,6 @@ footer img{
         margin: 20px 120px;
     }
 
-    .texto-inicio{
-
-    }
-
     main div img{
         width: 1000px;
         height: 700px;
@@ -312,8 +304,8 @@ footer img{
     }
 
     .menesunda img{
-        width: 535px;
-        height: 330px;
+        width: 550px;
+        height: 350px;
     }
 
 
