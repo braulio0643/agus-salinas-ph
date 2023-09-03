@@ -1,8 +1,21 @@
-.menesunda{
-    img{
-        transition:all 2s;
+.milHoras, .lbEquinox{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    transition: .2s linear;
+    overflow: hidden;
+    &:hover{
+        transform: scale(1.2);
     }
-    img:hover{
+    
+}
 
+.galeriaMarquee, .galeriaEquinox, .galeriaEquinox2 {
+    overflow:hidden;
+    a{
+        overflow:hidden;
+        img{
+            overflow:hidden;
+        }
     }
 }

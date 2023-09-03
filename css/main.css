@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .inicio {
   display: flex;
   flex-direction: column;
@@ -10,6 +9,20 @@
 
 .img-inicio-2 {
   display: none; }
+
+.galeriaMarquee, .galeriaEquinox, .galeriaEquinox2, .galeriaEditadas {
+  display: grid;
+  gap: 2rem;
+  margin: 2rem;
+  align-content: center; }
+  .galeriaMarquee a, .galeriaEquinox a, .galeriaEquinox2 a, .galeriaEditadas a {
+    height: 60vh;
+    border-radius: 1px;
+    border: 1px solid #6e4dd1; }
+    .galeriaMarquee a img, .galeriaEquinox a img, .galeriaEquinox2 a img, .galeriaEditadas a img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%; }
 
 .menesunda {
   display: flex;
@@ -32,16 +45,6 @@
   text-align: center;
   margin-top: 25px;
   color: #6e4dd1; }
-
-.galeriaMarquee, .galeriaEquinox, .galeriaEquinox2, .galeriaEditadas {
-  display: grid;
-  gap: 2rem;
-  margin: 2rem;
-  align-content: center; }
-  .galeriaMarquee img, .galeriaEquinox img, .galeriaEquinox2 img, .galeriaEditadas img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%; }
 
 .rosa {
   color: #6e4dd1; }
@@ -75,27 +78,31 @@
     width: 1000px;
     height: 700px; }
   .galeriaMarquee {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     margin: 3rem 18rem; }
-    .galeriaMarquee .img4 {
+    .galeriaMarquee .lb4 {
       grid-column: span 2; }
-    .galeriaMarquee .img5 {
-      display: none; }
-    .galeriaMarquee .img8 {
+      .galeriaMarquee .lb4 .img4 {
+        grid-column: span 2; }
+    .galeriaMarquee .lb8 {
       grid-column: span 2; }
-    .galeriaMarquee .img9 {
-      display: none; }
+      .galeriaMarquee .lb8 .img8 {
+        grid-column: span 2; }
   .galeriaEquinox {
+    display: grid;
     grid-template-columns: 2fr 3fr 2fr;
     grid-template-rows: repeat(3, 30%);
     margin: 0rem 18rem; }
-    .galeriaEquinox .img1 {
+    .galeriaEquinox .lb1 {
       grid-row: span 2; }
-    .galeriaEquinox .img2 {
-      display: block; }
-    .galeriaEquinox .img3 {
+      .galeriaEquinox .lb1 .img4 {
+        grid-row: span 2; }
+    .galeriaEquinox .lb3 {
       grid-row: span 2; }
+      .galeriaEquinox .lb3 .img3 {
+        grid-row: span 2; }
   .galeriaEquinox2 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
@@ -110,16 +117,194 @@
     width: 500px;
     height: 330px;
     transition: all 0.3s; }
-  .menesunda img:hover {
-    transform: scale(1.2); }
   .menesunda .img1 {
     width: 1020px;
-    height: 650px; }
-  /* Me gustaría que ssiempre queden en 2 columnas las fotos a partir de los 1000px, tratar de arreglarlo */ }
+    height: 650px; } }
 
 @media screen and (min-width: 1453px) {
   .stencils {
     margin: 2rem 11rem; } }
+
+.milHoras, .lbEquinox {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: .2s linear;
+  overflow: hidden; }
+  .milHoras:hover, .lbEquinox:hover {
+    transform: scale(1.2); }
+
+.galeriaMarquee, .galeriaEquinox, .galeriaEquinox2 {
+  overflow: hidden; }
+  .galeriaMarquee a, .galeriaEquinox a, .galeriaEquinox2 a {
+    overflow: hidden; }
+    .galeriaMarquee a img, .galeriaEquinox a img, .galeriaEquinox2 a img {
+      overflow: hidden; }
+
+body.lb-disable-scrolling {
+  overflow: hidden; }
+
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  display: none; }
+
+.lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal;
+  outline: none; }
+  .lightbox .lb-image {
+    display: block;
+    height: auto;
+    max-width: inherit;
+    max-height: none;
+    border-radius: 3px;
+    /* Image border */
+    border: 4px solid #6e4dd1; }
+  .lightbox a img {
+    border: none; }
+
+.lb-outerContainer {
+  position: relative;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 4px;
+  /* Background color behind image.
+       This is visible during transitions. */
+  background-color: #FFA3FD; }
+  .lb-outerContainer:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0; }
+
+.lb-cancel {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background: url(../images/loading.gif) no-repeat; }
+
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10; }
+
+.lb-container > .nav {
+  left: 0; }
+
+.lb-nav a {
+  outline: none;
+  background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="); }
+
+.lb-prev, .lb-next {
+  height: 100%;
+  cursor: pointer;
+  display: block; }
+
+.lb-nav a.lb-prev {
+  width: 34%;
+  left: 0;
+  float: left;
+  background: url(../images/prev.png) left 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s; }
+  .lb-nav a.lb-prev:hover {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; }
+
+.lb-nav a.lb-next {
+  width: 64%;
+  right: 0;
+  float: right;
+  background: url(../images/next.png) right 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s; }
+  .lb-nav a.lb-next:hover {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; }
+
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px; }
+  .lb-dataContainer:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .lb-dataContainer .lb-data {
+    padding: 0 4px;
+    color: #ccc; }
+    .lb-dataContainer .lb-data .lb-details {
+      width: 85%;
+      float: left;
+      text-align: left;
+      line-height: 1.1em; }
+    .lb-dataContainer .lb-data .lb-caption {
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 1em; }
+      .lb-dataContainer .lb-data .lb-caption a {
+        color: #4ae; }
+    .lb-dataContainer .lb-data .lb-number {
+      display: none;
+      opacity: 0%;
+      clear: left;
+      padding-bottom: 1em;
+      font-size: 0px;
+      color: #999999; }
+    .lb-dataContainer .lb-data .lb-close {
+      display: block;
+      float: right;
+      width: 30px;
+      height: 30px;
+      background: url(../images/close.png) top right no-repeat;
+      text-align: right;
+      outline: none;
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+      opacity: 0.7;
+      -webkit-transition: opacity 0.2s;
+      -moz-transition: opacity 0.2s;
+      -o-transition: opacity 0.2s;
+      transition: opacity 0.2s; }
+      .lb-dataContainer .lb-data .lb-close:hover {
+        cursor: pointer;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+        opacity: 1; }
 
 .navBarCustom {
   background-color: #6e4dd1;
@@ -182,4 +367,5 @@ footer {
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Ubuntu', sans-serif; }
+  font-family: 'Ubuntu', sans-serif;
+  box-sizing: border-box; }

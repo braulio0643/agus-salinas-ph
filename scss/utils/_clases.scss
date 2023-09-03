@@ -16,6 +16,23 @@
 }
 
 
+.galeriaMarquee, .galeriaEquinox, .galeriaEquinox2, .galeriaEditadas{
+    display:grid;
+    gap:2rem;
+    margin: 2rem;
+    align-content: center;
+    a{
+        height: 60vh;
+        border-radius:1px;
+        border: 1px solid nth($colores, 1);
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+}
 
 .menesunda{
     display:flex;
@@ -45,17 +62,7 @@
 }
 
 
-.galeriaMarquee, .galeriaEquinox, .galeriaEquinox2, .galeriaEditadas{
-    display:grid;
-    gap:2rem;
-    margin: 2rem;
-    align-content: center;
-    img{
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-}
+
 
 .rosa{
     color:nth($colores,1);
@@ -110,35 +117,42 @@
     }
 
     .galeriaMarquee{
+        display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: repeat(3, 1fr);
         margin: 3rem 18rem;
-        .img4{
+        .lb4{
             grid-column: span 2;
-        }
-        .img5{
-            display: none;
-        }
-        .img8{
+            .img4{
+                grid-column: span 2;
+            }
+        } 
+        .lb8{
             grid-column: span 2;
-        }
-        .img9{
-            display:none;
-        }
+            .img8{
+            grid-column: span 2;
+            }
+        } 
     }
 
     .galeriaEquinox{
+        display: grid;
         grid-template-columns: 2fr 3fr 2fr;
         grid-template-rows: repeat(3, 30%);
         margin:0rem 18rem;
-        .img1{
+        
+        .lb1{
             grid-row: span 2;
+            .img4{
+                grid-row: span 2;
+            }
         }
-        .img2{
-            display: block;   
-        }
-        .img3{
+        
+        .lb3{
             grid-row: span 2;
+            .img3{
+                grid-row: span 2;
+            }
         }
 
     }
@@ -164,15 +178,13 @@
             height: 330px;
             transition: all 0.3s;
         }
-        img:hover{
-            transform: scale(1.2);
-        }
+        
         .img1{
             width: 1020px;
             height: 650px;
         }
     } 
-    /* Me gustaría que ssiempre queden en 2 columnas las fotos a partir de los 1000px, tratar de arreglarlo */
+
     
 } 
 @media screen and (min-width:1453px){
