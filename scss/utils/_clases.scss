@@ -22,7 +22,7 @@
     margin: 2rem;
     align-content: center;
     a{
-        height: 60vh;
+        
         border-radius:1px;
         border: 1px solid nth($colores, 1);
         img{
@@ -41,9 +41,22 @@
     flex-wrap: wrap;
     gap: 20px;
     margin: 0px 10px;
-    img{
-        width: 350px;
-        height: 250px;
+    a{
+        width: 500px;
+        height: 330px;
+    
+        border-radius:1px;
+        border: 1px solid nth($colores, 1);
+        img{
+            object-fit:cover;
+            width: 100%;
+            height: 100%;
+        }
+        
+    }
+    .cover{
+        width: 1020px;
+    height: 650px;
     }
 }
 
@@ -61,11 +74,16 @@
     color: #6e4dd1;
 }
 
-
-
-
 .rosa{
     color:nth($colores,1);
+}
+
+.contacto{
+    div{
+        label{
+            color: nth($colores,1);
+        }
+    }
 }
 
 
@@ -103,18 +121,19 @@
 
     
 
-    main{
+    .inicio{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        align-items: center;
-        margin: 20px 120px;
+        align-items:center;
+        
+        div{
+            margin: 0px 50px;
+        }
     }
 
-    main div img{
-        width: 1000px;
-        height: 700px;
-    }
+    
+    
 
     .galeriaMarquee{
         display: grid;
@@ -170,25 +189,13 @@
     }
 
     .stencils{
-        margin: 2rem 0rem;
+        margin: 0rem 0rem;
     }
-    .menesunda{
-        img{
-            width: 500px;
-            height: 330px;
-            transition: all 0.3s;
-        }
-        
-        .img1{
-            width: 1020px;
-            height: 650px;
-        }
-    } 
-
+  
     
 } 
 @media screen and (min-width:1453px){
     .stencils{
-        margin: 2rem 11rem;
+        margin: 0rem 11rem;
     }
 }

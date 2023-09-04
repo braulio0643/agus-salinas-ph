@@ -49,7 +49,7 @@
   
     /* Background color behind image.
        This is visible during transitions. */
-    background-color: nth($colores, 2);
+    background-color: nth($colores, 1);
   
     &:after {
       content: "";
