@@ -5,7 +5,7 @@
     transition: .2s linear;
     overflow: hidden;
     &:hover{
-        transform: scale(1.2);
+        transform: scale(1.15);
     }
     
 }
@@ -20,8 +20,17 @@
     }
 }
 
+.dropdown-menu{
+   animation: fadeInCasero;
+   animation-duration: .2s;
+   animation-timing-function: ease-in;
+}
 
 
+@keyframes fadeInCasero{
+   0%{ opacity: 0%; }
+   100%{ opacity: 100%; }
+}
 
 
 
@@ -36,7 +45,7 @@
  * Copyright (c) 2020 Animate.css
  */
 :root {
-  --animate-duration: 1s;
+  --animate-duration: 2s;
   --animate-delay: 1s;
   --animate-repeat: 1;
 }
