@@ -1,12 +1,14 @@
 .navBarCustom{
-    background-color: #6e4dd1;
+    background-color: nth($colores, 1);
     border-radius: 25px;
     li{
         a{
-          font-weight: bold;     
+          font-weight: bold;
+          transition: all .5s;     
         }
         a:hover{
-            background-color: nth($colores,2);
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            background-color: nth($colores , 1 );
             border-radius: 5px;
         }
     }
@@ -21,30 +23,9 @@
 }
 
 
-/* .navBarCustom{
-    background-color: #6e4dd1;
-    border-radius: 25px;
-    li{
-        a{
-          font-weight: bold;     
-        }
-        a:hover{
-            background-color: nth($colores,2);
-            border-radius: 5px;
-        }
-    }
-    ul{
-        background-color: nth($colores,1);
-        li{
-            a:active{
-                background-color: nth($colores,1);
-            }
-        }
-    }
-} porlas */
-
 .bordeRosa{
-    border-color: #6e4dd1;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            
     background-color:  #6e4dd1;
     border-radius: 5px;
 } 
