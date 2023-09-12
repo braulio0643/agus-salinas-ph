@@ -3627,25 +3627,18 @@ body.lb-disable-scrolling {
         opacity: 1; }
 
 .navBarCustom {
-  opacity: 90%;
-  background-color: #010102;
-  border-radius: 25px; }
+  background-color: #010102; }
   .navBarCustom li a {
     font-weight: bold;
     font-size: 1.4rem;
     transition: all .5s;
     color: #F4F4F4 !important;
-    text-decoration: none;
-    position: relative;
     text-decoration: underline 0.15em rgba(0, 0, 0, 0);
     transition: all 300ms; }
   .navBarCustom li a:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 5px;
     color: #F4F4F4;
     text-decoration: underline 0.15em #F4F4F4; }
-  .navBarCustom li a:active {
-    background-color: #010102; }
   .navBarCustom ul {
     background-color: #010102; }
     .navBarCustom ul li a:hover {
