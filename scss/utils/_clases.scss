@@ -11,7 +11,7 @@
     div{
         p{
             font-size: 1.5rem;
-            color: #6e4dd1;
+            color: nth($colores, 1 );
         }
     }
 }
@@ -75,7 +75,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 25px;
-    color: #6e4dd1;
+    color: nth($colores, 1);
     margin-bottom: 10px;
 }
 
