@@ -1,32 +1,37 @@
 .navBarCustom{
-    background-color: nth($colores, 1);
-    border-radius: 25px;
+    background-color: nth($colores, 3);
     li{
         a{
           font-weight: bold;
-          transition: all .5s;     
+          font-size: 1.4rem;
+          transition: all .5s; 
+          color: nth($colores, 1 ) !important;  
+          text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+          transition: all 300ms;
         }
         a:hover{
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-            background-color: nth($colores , 1 );
             border-radius: 5px;
+            color: nth($colores, 1 ); 
+            text-decoration: underline 0.15em nth($colores, 1);
+            
         }
+        
     }
     ul{
-        background-color: nth($colores,1);
+        background-color: nth($colores,3);
         li{
-            a:active{
-                background-color: nth($colores,1);
+            
+            a:hover{
+                background-color: nth($colores, 3) !important;
             }
         }
     }
 }
 
 
-.bordeRosa{
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-            
-    background-color:  #6e4dd1;
+
+.bordeRosa{        
+    background-color: nth($colores,1 );
     border-radius: 5px;
 } 
 

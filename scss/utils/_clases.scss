@@ -11,8 +11,15 @@
     div{
         p{
             font-size: 1.5rem;
-            color: #6e4dd1;
+            color: nth($colores, 1 );
         }
+    }
+}
+
+.texto-inicio{
+    color: nth($colores,1);
+    h1{
+        color: nth($colores,1);
     }
 }
 
@@ -70,12 +77,20 @@
     margin: 0px 25px;
 }
 
+.accordion-item{
+    background-color: nth($colores, 3) !important;
+    margin: 0px 250px;
+}
+.accordion-button{
+    
+}
+
 .tituloGaleria{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 25px;
-    color: #6e4dd1;
+    margin: 25px;
+    color: nth($colores, 1);
     margin-bottom: 10px;
 }
 
@@ -104,9 +119,7 @@
 
 @media screen and (min-width:1000px){
 
-    .socials{
-        width:900px;
-    }
+    
     .img-inicio-1{
         display:none;
     }
@@ -125,9 +138,9 @@
 
     .navBarLogo{
         margin-left: 20px;
-        margin-top: 7px;
+        margin-top: 0px;
         display: block;
-        width: 200px;
+        width: 100px;
         height: 100%;
     }
     
@@ -143,9 +156,7 @@
         }
     }
 
-    .texto-inicio{
-        color: nth($colores,1);
-    }
+    
     
     
 
