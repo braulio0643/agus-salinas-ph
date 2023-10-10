@@ -31,7 +31,7 @@
     display: none;
 }
 
-.galeriaMarquee, .galeriaEquinox, .galeriaEquinox2, .galeriaEditadas{
+.galeriaMarquee, .galeriaEquinox, .galeriaEquinox2, .galeriaEditadas, .galeriaSociales{
     display:grid;
     gap:2rem;
     margin: 2rem;
@@ -200,6 +200,10 @@
     
     .galeriaEditadas{
         @include grids(repeat(3,1fr), repeat(3,1fr), 0% 25% 1% 25%);
+    }
+
+    .galeriaSociales{
+        @include grids(repeat(2,1fr), repeat(2,1fr), 0% 25% 1% 25%);
     }
     
 

@@ -1,6 +1,6 @@
 @import "./clases";
 
-.milHoras, .lbEquinox, .vanitas, .bombonDeLicor, .ringoGalperin, .alba, .editadas{
+.milHoras, .lbEquinox, .vanitas, .bombonDeLicor, .ringoGalperin, .alba, .editadas, .sociales{
     height:100%;
     width:100%;
     object-fit:cover;
@@ -12,7 +12,7 @@
     
 }
 
-.galeriaMarquee, .galeriaEditadas, .galeriaEquinox, .galeriaEquinox2, .menesunda, .stencils{
+.galeriaMarquee, .galeriaEditadas, .galeriaEquinox, .galeriaEquinox2, .menesunda, .stencils, .galeriaSociales{
     overflow:hidden;
     a{
         overflow:hidden;
